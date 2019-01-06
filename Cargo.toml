@@ -1,0 +1,8 @@
+[package]
+name = "my-shiny-heroku-rust-test-app"
+version = "0.1.0"
+authors = ["Johannes J. Schmidt <schmidt@netzmerk.com>"]
+edition = "2018"
+
+[dependencies]
+rocket = "0.4.0"
