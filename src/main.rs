@@ -1,13 +1,9 @@
-#![feature(proc_macro_hygiene, decl_macro)]
+extern crate iron;
 
-#[macro_use] extern crate rocket;
-
-#[get("/")]
-fn index() -> &'static str {
-    "Hello, my shiny nifty heroku rust test app!"
-}
+use iron::prelude::*;
+use iron::status;
 
 fn main() {
-    rocket::ignite().mount("/", routes![index]).launch();
+    Iron::new(|_: &mut Request| Ok(Response::with((status::Ok, "Hello world!"))))
+        .http("localhost:3000");
 }
-
