@@ -1,1 +1,1 @@
-web: ./my-shiny-heroku-rust-test-app
+web: ./target/release/my-shiny-heroku-rust-test-app
